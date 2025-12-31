@@ -1,0 +1,70 @@
+// все шрифты добавляются сюда
+// mixin: font-face берёт формат woff2
+// mixin: font-face-format последним значением нужно указать формат шрифта
+
+// PlayfairDisplay
+// PD900
+@include font-face-format(
+  "PlayfairDisplay",
+  "/PlayfairDisplay-BlackItalic",
+  900,
+  italic,
+  ttf
+);
+@include font-face-format(
+  "PlayfairDisplay",
+  "/PlayfairDisplay-Black",
+  900,
+  normal,
+  ttf
+);
+// PD 700
+@include font-face-format(
+  "PlayfairDisplay",
+  "/PlayfairDisplay-BoldItalic",
+  700,
+  italic,
+  ttf
+);
+@include font-face-format(
+  "PlayfairDisplay",
+  "/PlayfairDisplay-Bold",
+  700,
+  normal,
+  ttf
+);
+// PD 400
+@include font-face-format(
+  "PlayfairDisplay",
+  "/PlayfairDisplay-Italic",
+  400,
+  italic,
+  ttf
+);
+@include font-face-format(
+  "PlayfairDisplay",
+  "/PlayfairDisplay-Regular",
+  400,
+  normal,
+  ttf
+);
+
+// Robots
+// Rb900
+@include font-face-format("Roboto", "/roboto-black", 900, normal, ttf);
+@include font-face-format("Roboto", "/roboto-black-italic", 900, italic, ttf);
+// Rb700
+@include font-face-format("Roboto", "/roboto-bold", 700, normal, ttf);
+@include font-face-format("Roboto", "/roboto-bold-italic", 700, italic, ttf);
+// Rb500
+@include font-face-format("Roboto", "/roboto-medium", 500, normal, ttf);
+@include font-face-format("Roboto", "/roboto-medium-italic", 500, italic, ttf);
+// Rb400
+@include font-face-format("Roboto", "/roboto-regular", 400, normal, ttf);
+@include font-face-format("Roboto", "/roboto-italic", 400, italic, ttf);
+// Rb300
+@include font-face-format("Roboto", "/roboto-light", 300, normal, ttf);
+@include font-face-format("Roboto", "/roboto-light-italic", 300, italic, ttf);
+// Rb100
+@include font-face-format("Roboto", "/roboto-thin", 100, normal, ttf);
+@include font-face-format("Roboto", "/roboto-thin-italic", 100, italic, ttf);

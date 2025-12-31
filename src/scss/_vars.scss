@@ -1,0 +1,35 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --content-width: 1170px;
+  --container-offset: 15px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+
+  // colors
+  --main-color: #3d2116;
+  --secondary-color: #964e13;
+  --white-color: #fff;
+
+  // designer styles
+
+  --font-family: "Roboto", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --third-family: "Tahoma", sans-serif;
+  --font3: "Arial", sans-serif;
+  --font4: "PlayfairDisplay", sans-serif;
+  --font5: "Dhyana", sans-serif;
+  --font6: "DRUZHOK", sans-serif;
+  --font7: "Cormorant", sans-serif;
+  --font8: "Verdana", sans-serif;
+  --font9: "Ubuntu", sans-serif;
+  --font10: "Arsenica Italic Variable Trial", sans-serif;
+  --font11: "AireRomanStd", sans-serif;
+  --font12: "Arizonia", sans-serif;
+  --font13: "TRIAL Oceanic", sans-serif;
+  --font14: "Arsenica Alt Trial", sans-serif;
+  --font15: "DidonaC", sans-serif;
+  --font16: "Montserrat", sans-serif;
+  --font17: "Play", sans-serif;
+  --font18: "Georgia", sans-serif;
+}

@@ -12,11 +12,16 @@
 // const modal = new GraphModal();
 
 // Подключение свайпера
-// import Swiper, { Navigation, Pagination } from 'swiper';
-// Swiper.use([Navigation, Pagination]);
-// const swiper = new Swiper(el, {
-//   slidesPerView: 'auto',
-// });
+import Swiper, { Navigation, Pagination } from "swiper";
+Swiper.use([Navigation, Pagination]);
+const swiperReviews = new Swiper(".js-swiper-reviews", {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".js-swiper-reviews--right",
+    prevEl: ".js-swiper-reviews--left",
+  },
+});
 
 // Подключение плавной прокрутки к якорям
 // import SmoothScroll from 'smooth-scroll';

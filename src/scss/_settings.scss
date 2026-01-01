@@ -16,8 +16,8 @@ html {
 // при необходимости можно убрать
 @media screen and (pointer: fine) {
   html {
-    width: 100vw;
-    margin-left: calc((100% - 100vw) / 2);
+    // width: 100vw;
+    // margin-left: calc((100% - 100vw) / 2);
   }
 }
 //
@@ -132,4 +132,16 @@ a {
 
   // тестовое св-во, чтобы не прыгала страница, если прыгает, убираем
   overflow-y: scroll;
+}
+
+.el-desktop {
+  @include mobile {
+    display: none;
+  }
+}
+
+.el-mobile {
+  @include desktop {
+    display: none;
+  }
 }

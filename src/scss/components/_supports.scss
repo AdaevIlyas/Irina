@@ -22,7 +22,15 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    padding-right: rem(273);
+    padding-right: rem(174);
+
+    &_padding {
+      padding-right: rem(233);
+
+      .supports__line:nth-child(3) {
+        padding-right: rem(80);
+      }
+    }
   }
 
   &__line {
@@ -46,6 +54,11 @@
     }
     &:nth-child(3) {
       align-self: center;
+      padding-right: rem(590);
+    }
+
+    &_padding {
+      padding-right: rem(30);
     }
   }
 

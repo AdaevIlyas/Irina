@@ -52,6 +52,7 @@
   &__swiper {
     flex: 0 0 rem(1282);
     height: rem(400);
+    margin-inline: 0;
   }
 
   &__swiper-wrapper {
@@ -115,5 +116,35 @@
     line-height: 100%;
     color: rgba(0, 0, 0, 0.5);
     opacity: 0.5;
+  }
+
+  &__body {
+    flex: 1 1 auto;
+    height: rem(300);
+
+    padding-top: rem(17);
+  }
+
+  &__body-scroll {
+    height: 100%;
+
+    overflow-y: auto;
+  }
+
+  &__body-text {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: rem(18);
+    line-height: 130%;
+    color: rgba(0, 0, 0, 0.85);
+
+    p,
+    li {
+      font-family: var(--font-family);
+      font-weight: 300;
+      font-size: rem(18);
+      line-height: 130%;
+      color: rgba(0, 0, 0, 0.85);
+    }
   }
 }

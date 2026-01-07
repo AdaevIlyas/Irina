@@ -1,5 +1,5 @@
-<section class="reviews">
-    <div class="container">
+<section class="reviews" data-anchors-point="reviews">
+    <div class="container container_section">
         <div class="reviews__inner">
             <h2 class="title reviews__title">отзывы учеников</h2>
             <div class="reviews__body">
@@ -13,28 +13,95 @@
                 </div>
                 <div class="swiper reviews__swiper js-swiper-reviews">
                     <div class="swiper-wrapper reviews__swiper-wrapper">
-                        <div class="swiper-slide reviews__swiper-slide">
-                            <div class="review">
-                                <div class="review__head">
-                                    <div class="review__head-img">
-                                        <img src="/img/review.png" alt="">
-                                    </div>
-                                    <div class="review__head-info">
-                                        <div class="review__head-name">
-                                            Ольга Лещенко
+                        @for(let i = 0; i < 2; i++) { <!-- -->
+                            <div class="swiper-slide reviews__swiper-slide">
+                                <div class="review">
+                                    <div class="review__head">
+                                        <div class="review__head-img">
+                                            <img src="/img/review.png" alt="">
                                         </div>
-                                        <div class="review__head-city">
-                                            Омск
+                                        <div class="review__head-info">
+                                            <div class="review__head-name">
+                                                Ольга Лещенко
+                                            </div>
+                                            <div class="review__head-city">
+                                                Омск
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="review__body">
-                                    <div class="review__body-scroll">
-                                        <div class="review__body-text"></div>
+                                    <div class="review__body">
+                                        <div class="review__body-scroll">
+                                            <div class="review__body-text">
+                                                Наталья Акулич проводит курс по Озону и ВБ, который является отличным
+                                                стартом для новичков. Весь материал структурирован и подается понятно,
+                                                есть
+                                                много практических заданий. Наталья всегда готова помочь и поддержать,
+                                                что
+                                                очень вдохновляет.
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <div class="swiper-slide reviews__swiper-slide">
+                                <div class="review">
+                                    <div class="review__head">
+                                        <div class="review__head-img">
+                                            <img src="/img/review.png" alt="">
+                                        </div>
+                                        <div class="review__head-info">
+                                            <div class="review__head-name">
+                                                Ольга Лещенко
+                                            </div>
+                                            <div class="review__head-city">
+                                                Омск
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review__body">
+                                        <div class="review__body-scroll">
+                                            <div class="review__body-text">
+                                                Когда я решила пойти учиться
+                                                на менеджера маркетплейсов,
+                                                то не нашла отзывов про обучение. Позже выяснила, что это новый курс.
+                                                В подкастах про эту профессию советовали идти учиться в большие
+                                                компании,
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide reviews__swiper-slide">
+                                <div class="review">
+                                    <div class="review__head">
+                                        <div class="review__head-img">
+                                            <img src="/img/review.png" alt="">
+                                        </div>
+                                        <div class="review__head-info">
+                                            <div class="review__head-name">
+                                                Ольга Лещенко
+                                            </div>
+                                            <div class="review__head-city">
+                                                Омск
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review__body">
+                                        <div class="review__body-scroll">
+                                            <div class="review__body-text">
+                                                Когда я решила пойти учиться
+                                                на менеджера маркетплейсов,
+                                                то не нашла отзывов про обучение. Позже выяснила, что это новый курс.
+                                                В подкастах про эту профессию советовали идти учиться в большие
+                                                компании,
+                                                потому что они актуализируют учебный материал.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            }
+
                     </div>
                 </div>
             </div>

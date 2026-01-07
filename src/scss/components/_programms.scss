@@ -1,0 +1,82 @@
+.programms {
+  margin-block: rem(110) rem(120);
+
+  &__inner {
+    display: flex;
+    align-items: start;
+    gap: rem(100);
+  }
+
+  &__title {
+    padding-top: rem(40);
+    flex: 1 1 auto;
+  }
+
+  &__body {
+    flex: 0 0 rem(1271);
+  }
+
+  &__tabs {
+    display: flex;
+    align-items: end;
+  }
+
+  &__tab {
+    display: grid;
+    place-content: center;
+
+    min-width: rem(196);
+    height: rem(68);
+    padding-inline: rem(20);
+    border-radius: rem(10) rem(10) 0 0;
+    background: rgba(255, 255, 255, 0.3);
+
+    cursor: pointer;
+
+    span {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: rem(36);
+      line-height: 120%;
+      color: var(--main-color);
+      opacity: 0.2;
+    }
+
+    &.active {
+      min-width: rem(280);
+      height: rem(80);
+      background: rgba(255, 255, 255);
+
+      cursor: default;
+
+      span {
+        font-style: italic;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__content {
+    &::before {
+      content: "";
+
+      display: block;
+      border-radius: 0 rem(10) 0 0;
+      height: rem(40);
+      background: #fff;
+    }
+  }
+
+  &__list {
+    display: none;
+    flex-direction: column;
+    gap: rem(4);
+
+    border-radius: 0 0 rem(10) rem(10);
+    overflow: hidden;
+
+    &.active {
+      display: flex;
+    }
+  }
+}

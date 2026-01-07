@@ -1,4 +1,7 @@
 .footer {
+  position: relative;
+  z-index: 10;
+
   margin-top: rem(150);
   padding-block: rem(30) rem(50);
   border-radius: rem(30) rem(30) 0 0;

@@ -1,0 +1,24 @@
+.faq {
+  margin-block: rem(250) rem(150);
+
+  &__inner {
+    display: flex;
+    align-items: start;
+    gap: rem(100);
+  }
+
+  &__title {
+    padding-top: rem(15);
+    flex: 1 1 auto;
+  }
+
+  &__body {
+    flex: 0 0 rem(1271);
+
+    display: flex;
+    flex-direction: column;
+    gap: rem(4);
+    border-radius: rem(10);
+    overflow: hidden;
+  }
+}

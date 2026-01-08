@@ -14,7 +14,14 @@ export default function anchors() {
     anchor.classList.add("anchors__item");
 
     anchor.addEventListener("click", () => {
-      point.scrollIntoView({ behavior: "smooth", block: "start" });
+      const rect = point.getBoundingClientRect();
+      const rectHeight = rect.height;
+
+      if (rectHeight < window.innerHeight) {
+        point.scrollIntoView({ behavior: "smooth", block: "center" });
+      } else {
+        point.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     });
 
     container.appendChild(anchor);

@@ -1,0 +1,74 @@
+.author {
+  margin-block: rem(150) rem(75);
+
+  &__inner {
+    display: flex;
+    align-items: start;
+    gap: rem(100);
+  }
+
+  &__left {
+    flex: 1 1 auto;
+  }
+
+  &__title {
+  }
+
+  &__author {
+    margin-top: rem(30);
+
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: rem(48);
+    line-height: 100%;
+    color: var(--main-color);
+
+    span {
+      display: block;
+      font-style: italic;
+      font-weight: 500;
+    }
+  }
+
+  &__body {
+    flex: 0 0 rem(1275);
+
+    padding-top: rem(39);
+  }
+
+  &__text {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: rem(32);
+    line-height: 130%;
+    color: var(--main-color);
+  }
+
+  &__cards {
+    margin-top: rem(75);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(20);
+  }
+
+  &__card {
+    min-width: 0;
+  }
+
+  &__card-title {
+    margin-bottom: rem(25);
+  }
+
+  &__card-info {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(36);
+    line-height: 120%;
+    color: var(--main-color);
+
+    span {
+      font-size: rem(52);
+    }
+  }
+}

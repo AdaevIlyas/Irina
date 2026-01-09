@@ -1,0 +1,128 @@
+.about {
+  margin-block: rem(90) rem(215);
+
+  &__decor {
+    position: absolute;
+    left: rem(1);
+    bottom: rem(-24);
+
+    display: flex;
+    flex-direction: column;
+    gap: rem(1);
+  }
+
+  &__decor-icon {
+    width: rem(290);
+    height: rem(290);
+  }
+
+  &__inner {
+    position: relative;
+
+    display: flex;
+    align-items: start;
+    gap: rem(100);
+  }
+
+  &__left {
+  }
+
+  &__title {
+    padding-top: rem(10);
+    flex: 1 1 auto;
+  }
+
+  &__body {
+    flex: 0 0 rem(1275);
+  }
+
+  &__text {
+    font-family: var(--font-family);
+    font-size: rem(48);
+    font-weight: 300;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    color: var(--main-color);
+    margin-bottom: rem(40);
+
+    span {
+      font-style: italic;
+      font-weight: 500;
+      color: var(--secondary-color);
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: start;
+    gap: rem(60);
+  }
+
+  &__cms {
+    padding-top: rem(40);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-family);
+      font-style: italic;
+      font-weight: 400;
+      font-size: rem(24);
+      line-height: 130%;
+      color: var(--main-color);
+      margin-bottom: rem(20);
+    }
+
+    p,
+    li {
+      font-family: var(--font-family);
+      font-weight: 300;
+      font-size: rem(24);
+      line-height: 130%;
+      letter-spacing: -0.02em;
+      color: var(--main-color);
+    }
+
+    ul,
+    ol {
+      font-size: rem(24);
+    }
+
+    ul {
+      list-style-position: inside;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        line-height: 1;
+
+        &::before {
+          content: url('data:image/svg+xml,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0C7.41101 3.68235 10.3176 6.58899 14 7C10.3176 7.41101 7.41101 10.3176 7 14C6.58899 10.3176 3.68235 7.41101 0 7C3.68235 6.58899 6.58899 3.68235 7 0Z" fill="%23964E13" /></svg>');
+          display: block;
+          width: 14px;
+          height: 14px;
+        }
+      }
+    }
+
+    ol {
+      list-style-position: inside;
+    }
+
+    *:not(:last-child) {
+      margin-bottom: 0.6em;
+    }
+  }
+
+  &__img {
+    flex: 0 0 auto;
+    border-radius: rem(10);
+    width: rem(435);
+    height: rem(600);
+  }
+}

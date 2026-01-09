@@ -1,0 +1,41 @@
+.tariffs {
+  margin-block: rem(215) rem(100);
+
+  &__inner {
+    position: relative;
+
+    display: flex;
+    align-items: start;
+    gap: rem(100);
+  }
+
+  &__title {
+    padding-top: rem(17);
+    flex: 1 1 auto;
+  }
+
+  &__body {
+    flex: 0 0 rem(1275);
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(30);
+  }
+
+  &__heading {
+    font-family: var(--font-family);
+    font-style: italic;
+    font-weight: 500;
+    font-size: rem(48);
+    line-height: 120%;
+    color: var(--secondary-color);
+
+    span {
+      font-weight: 300;
+      color: var(--main-color);
+    }
+  }
+}

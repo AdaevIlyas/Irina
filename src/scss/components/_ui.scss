@@ -84,10 +84,11 @@
   align-items: center;
   gap: rem(8);
 
-  &:has(#platform-radio:checked) {
+  &.checked {
     .platform__label_one {
       color: #c0c0c0;
       pointer-events: all;
+      cursor: pointer;
     }
 
     .platform__label_two {
@@ -95,6 +96,9 @@
       pointer-events: none;
     }
   }
+
+  // &:has(#platform-radio:checked) {
+  // }
 
   &__label {
     font-family: var(--font-family);
@@ -106,6 +110,10 @@
     &_one {
       color: var(--main-color);
       pointer-events: none;
+    }
+
+    &_two {
+      cursor: pointer;
     }
   }
 
@@ -125,6 +133,8 @@
     width: rem(36);
     border-radius: rem(20);
     background: var(--main-color);
+
+    cursor: pointer;
   }
 
   &__checkbox {

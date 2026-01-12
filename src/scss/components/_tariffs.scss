@@ -1,6 +1,61 @@
 .tariffs {
   margin-block: rem(215) rem(100);
 
+  &.checked {
+    .tariffs__list {
+      &_one {
+        display: none;
+      }
+
+      &_two {
+        display: grid;
+      }
+    }
+
+    .tariff {
+      background: var(--main-color);
+    }
+
+    .tariff_leader {
+      background: var(--secondary-color);
+
+      ul {
+        li {
+          &::before {
+            background: var(--main-color);
+          }
+        }
+      }
+
+      .tariff__cheaper {
+        color: var(--white-color);
+      }
+
+      .btn-star {
+        color: var(--secondary-color);
+      }
+    }
+
+    .tariff__title {
+      color: var(--white-color);
+    }
+
+    .tariff__cms {
+      p,
+      li {
+        color: var(--white-color);
+      }
+    }
+
+    .tariff__price {
+      color: var(--white-color);
+
+      span {
+        color: var(--white-color);
+      }
+    }
+  }
+
   &__inner {
     position: relative;
 
@@ -9,13 +64,25 @@
     gap: rem(100);
   }
 
+  &__decor {
+    position: absolute;
+    left: rem(-35);
+    bottom: 0;
+
+    width: rem(406);
+    height: rem(420);
+    object-fit: contain;
+
+    pointer-events: none;
+  }
+
   &__title {
     padding-top: rem(17);
     flex: 1 1 auto;
   }
 
   &__body {
-    flex: 0 0 rem(1275);
+    flex: 0 0 rem(1276);
   }
 
   &__top {
@@ -33,9 +100,204 @@
     line-height: 120%;
     color: var(--secondary-color);
 
+    display: flex;
+    align-items: center;
+    gap: rem(13);
+
+    height: rem(58);
+
     span {
       font-weight: 300;
       color: var(--main-color);
     }
+  }
+
+  &__list {
+    margin-top: rem(20);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(20);
+
+    &_two {
+      display: none;
+    }
+  }
+}
+
+.tariff {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: rem(10);
+
+  min-width: 0;
+  min-height: rem(770);
+
+  padding: rem(30);
+  border-radius: rem(10);
+
+  overflow: hidden;
+
+  background: #ededed;
+
+  &_standard {
+    .tariff__decor {
+      width: rem(142);
+      height: rem(311);
+
+      right: rem(43);
+      bottom: rem(174);
+    }
+  }
+
+  &_leader {
+    background: var(--white-color);
+
+    .tariff__decor {
+      width: rem(229);
+      height: rem(319);
+
+      right: 0;
+      bottom: rem(82);
+    }
+  }
+
+  &_business {
+    .tariff__decor {
+      width: rem(177);
+      height: rem(352);
+
+      right: rem(29);
+      bottom: rem(155);
+    }
+  }
+
+  &__top {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__bottom {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: rem(52);
+    line-height: 120%;
+    color: var(--main-color);
+  }
+
+  &__cms {
+    padding-top: rem(10);
+
+    p,
+    li {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: rem(16);
+      line-height: 130%;
+      letter-spacing: -0.02em;
+      color: var(--main-color);
+    }
+
+    ul,
+    ol {
+      font-size: rem(20);
+    }
+
+    ul {
+      list-style-position: inside;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        line-height: 1;
+
+        &::before {
+          flex: 0 0 auto;
+
+          content: "";
+          mask: url('data:image/svg+xml,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0C7.41101 3.68235 10.3176 6.58899 14 7C10.3176 7.41101 7.41101 10.3176 7 14C6.58899 10.3176 3.68235 7.41101 0 7C3.68235 6.58899 6.58899 3.68235 7 0Z" fill="%23964E13" /></svg>');
+          display: block;
+          width: 14px;
+          height: 14px;
+          margin-bottom: auto;
+          background: var(--secondary-color);
+        }
+      }
+    }
+
+    ol {
+      list-style-position: inside;
+    }
+
+    *:not(:last-child) {
+      margin-bottom: 0.9em;
+    }
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: rem(10);
+
+    padding-bottom: rem(10);
+
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: rem(16);
+    line-height: 150%;
+    color: var(--main-color);
+
+    span {
+      font-weight: 500;
+      font-size: rem(32);
+      line-height: 100%;
+      color: var(--main-color);
+    }
+  }
+
+  &__btn {
+    font-size: rem(18);
+
+    padding-inline: rem(40);
+
+    justify-content: center;
+
+    min-height: rem(43);
+    width: 100%;
+  }
+
+  &__cheaper {
+    display: block;
+
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: rem(16);
+    line-height: 150%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: var(--secondary-color);
+
+    max-width: fit-content;
+    margin: rem(15) auto 0 auto;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    z-index: 1;
   }
 }

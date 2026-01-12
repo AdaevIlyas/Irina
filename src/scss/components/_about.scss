@@ -9,6 +9,8 @@
     display: flex;
     flex-direction: column;
     gap: rem(1);
+
+    pointer-events: none;
   }
 
   &__decor-icon {
@@ -106,6 +108,9 @@
           display: block;
           width: 14px;
           height: 14px;
+
+          margin-top: 2px;
+          margin-bottom: auto;
         }
       }
     }

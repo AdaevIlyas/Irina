@@ -71,16 +71,8 @@
   }
 
   &__middle-message {
-    font-family: var(--font-family);
-    font-weight: 300;
-    font-size: rem(32);
-    line-height: 130%;
-    letter-spacing: -0.02em;
-    color: var(--main-color);
-
     margin-block: auto;
     padding: rem(17) 0 rem(17) rem(32);
-    border-left: rem(4) solid var(--main-color);
 
     max-width: rem(475);
   }
@@ -113,6 +105,98 @@
     margin-block: rem(100) rem(120);
     object-fit: contain;
     object-position: left;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: end;
+    gap: rem(55);
+  }
+
+  &__bottom-left {
+  }
+
+  &__bottom-img {
+    flex: 0 0 auto;
+
+    width: rem(668);
+    height: rem(998);
+
+    border-radius: rem(10);
+    margin-bottom: rem(43);
+  }
+
+  &__bottom-message {
+    margin-block: rem(85);
+    padding: rem(10) 0 rem(10) rem(35);
+  }
+
+  &__scope {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: rem(50);
+
+    margin-top: rem(90);
+  }
+
+  &__scope-title {
+    flex: 0 0 auto;
+
+    div {
+      font-family: var(--font4);
+      font-weight: 400;
+      font-size: rem(96);
+      line-height: 100%;
+      color: var(--main-color);
+
+      &:nth-child(2) {
+        margin-left: rem(150);
+      }
+    }
+  }
+
+  &__scope-author {
+    max-width: rem(483);
+  }
+
+  &__scope-text {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: rem(32);
+    line-height: 130%;
+    letter-spacing: -0.02em;
+    color: var(--main-color);
+
+    margin-block: rem(35) rem(30);
+  }
+
+  &__scope-post {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: rem(20);
+  }
+
+  &__scope-post-info {
+    font-family: var(--font4);
+    font-weight: 400;
+    font-size: rem(36);
+    line-height: 100%;
+    color: var(--main-color);
+  }
+
+  &__scope-post-name {
+    font-family: var(--font-family);
+    font-style: italic;
+    font-weight: 500;
+    font-size: rem(32);
+    line-height: 100%;
+    color: var(--main-color);
+
+    span {
+      font-weight: 300;
+    }
   }
 }
 
@@ -158,4 +242,14 @@
   *:not(:last-child) {
     margin-bottom: 0.6em;
   }
+}
+
+.history-message {
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: rem(32);
+  line-height: 130%;
+  letter-spacing: -0.02em;
+  color: var(--main-color);
+  border-left: rem(4) solid var(--main-color);
 }

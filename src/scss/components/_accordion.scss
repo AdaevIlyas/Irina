@@ -4,6 +4,10 @@
 
   cursor: pointer;
 
+  @include mobile {
+    padding: rem(20);
+  }
+
   &.open {
     .accordion__head-module {
       background: var(--secondary-color);
@@ -23,6 +27,18 @@
     justify-content: space-between;
     align-items: start;
     gap: rem(20);
+
+    @include mobile {
+      position: relative;
+    }
+  }
+
+  &__head_faq {
+    align-items: center;
+
+    .accordion__close {
+      position: static;
+    }
   }
 
   &__head-inner {
@@ -44,6 +60,11 @@
     background: var(--main-color);
 
     transition: all 0.3s ease;
+
+    @include mobile {
+      font-size: rem(14);
+      line-height: 130%;
+    }
   }
 
   &__head-title {
@@ -53,12 +74,24 @@
     line-height: 130%;
     letter-spacing: -0.02em;
     color: var(--main-color);
+
+    @include mobile {
+      font-size: rem(18);
+    }
   }
 
   &__close {
+    flex: 0 0 auto;
+
     width: rem(30);
     height: rem(30);
     transition: all 0.3s ease;
+
+    @include mobile {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
 
     svg {
       width: 100%;
@@ -83,6 +116,10 @@
   &__body-inner {
     padding-top: rem(10);
 
+    @include mobile {
+      padding-top: rem(8);
+    }
+
     p,
     li {
       font-family: var(--font-family);
@@ -91,6 +128,10 @@
       line-height: 130%;
       letter-spacing: -0.02em;
       color: var(--main-color);
+
+      @include mobile {
+        font-size: rem(14);
+      }
     }
 
     ul,
@@ -104,15 +145,25 @@
       li {
         display: flex;
         align-items: center;
-        gap: 5px;
+        gap: 8px;
 
-        line-height: 1;
+        @include mobile {
+          gap: 5px;
+        }
 
         &::before {
-          content: url('data:image/svg+xml,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0C7.41101 3.68235 10.3176 6.58899 14 7C10.3176 7.41101 7.41101 10.3176 7 14C6.58899 10.3176 3.68235 7.41101 0 7C3.68235 6.58899 6.58899 3.68235 7 0Z" fill="%23964E13" /></svg>');
+          flex: 0 0 auto;
+
+          content: "";
+          mask: url('data:image/svg+xml,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0C7.41101 3.68235 10.3176 6.58899 14 7C10.3176 7.41101 7.41101 10.3176 7 14C6.58899 10.3176 3.68235 7.41101 0 7C3.68235 6.58899 6.58899 3.68235 7 0Z" fill="%23964E13" /></svg>');
+          mask-size: contain;
+          mask-repeat: no-repeat;
+
           display: block;
           width: 14px;
           height: 14px;
+          margin-bottom: auto;
+          background: var(--secondary-color);
         }
       }
     }
@@ -123,6 +174,10 @@
 
     *:not(:last-child) {
       margin-bottom: 0.6em;
+
+      @include mobile {
+        margin-bottom: 0.8em;
+      }
     }
   }
 }

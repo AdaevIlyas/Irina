@@ -1,6 +1,10 @@
 .tariffs {
   margin-block: rem(215) rem(100);
 
+  @include mobile {
+    margin-block: rem(60) rem(40);
+  }
+
   &.checked {
     .tariffs__list {
       &_one {
@@ -8,7 +12,7 @@
       }
 
       &_two {
-        display: grid;
+        display: flex;
       }
     }
 
@@ -62,6 +66,11 @@
     display: flex;
     align-items: start;
     gap: rem(100);
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(24);
+    }
   }
 
   &__decor {
@@ -74,15 +83,27 @@
     object-fit: contain;
 
     pointer-events: none;
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__title {
     padding-top: rem(17);
     flex: 1 1 auto;
+
+    @include mobile {
+      padding-top: 0;
+    }
   }
 
   &__body {
     flex: 0 0 rem(1276);
+
+    @include mobile {
+      flex: 1 1 auto;
+    }
   }
 
   &__top {
@@ -90,6 +111,12 @@
     align-items: center;
     justify-content: space-between;
     gap: rem(30);
+
+    @include mobile {
+      flex-direction: column;
+      align-items: start;
+      gap: rem(16);
+    }
   }
 
   &__heading {
@@ -106,6 +133,14 @@
 
     height: rem(58);
 
+    @include mobile {
+      font-size: rem(24);
+
+      gap: rem(7);
+      align-items: start;
+      height: auto;
+    }
+
     span {
       font-weight: 300;
       color: var(--main-color);
@@ -118,6 +153,20 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: rem(20);
+
+    @include mobile {
+      display: flex;
+      gap: rem(8);
+      overflow: scroll;
+
+      width: 100vw;
+
+      padding-inline: rem(16);
+      margin-left: rem(-16);
+
+      padding-bottom: rem(10);
+      margin-bottom: rem(-10);
+    }
 
     &_two {
       display: none;
@@ -143,6 +192,15 @@
 
   background: #ededed;
 
+  @include mobile {
+    flex: 0 0 auto;
+
+    width: rem(280);
+    min-height: rem(640);
+
+    padding: rem(20);
+  }
+
   &_standard {
     .tariff__decor {
       width: rem(142);
@@ -150,6 +208,11 @@
 
       right: rem(43);
       bottom: rem(174);
+
+      @include mobile {
+        right: rem(18);
+        bottom: rem(107);
+      }
     }
   }
 
@@ -162,6 +225,10 @@
 
       right: 0;
       bottom: rem(82);
+
+      @include mobile {
+        bottom: rem(15);
+      }
     }
   }
 
@@ -172,6 +239,11 @@
 
       right: rem(29);
       bottom: rem(155);
+
+      @include mobile {
+        right: rem(17);
+        bottom: rem(145);
+      }
     }
   }
 
@@ -191,6 +263,10 @@
     font-size: rem(52);
     line-height: 120%;
     color: var(--main-color);
+
+    @include mobile {
+      font-size: rem(32);
+    }
   }
 
   &__cms {
@@ -204,6 +280,10 @@
       line-height: 130%;
       letter-spacing: -0.02em;
       color: var(--main-color);
+
+      @include mobile {
+        font-size: rem(14);
+      }
     }
 
     ul,
@@ -226,11 +306,19 @@
 
           content: "";
           mask: url('data:image/svg+xml,<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7 0C7.41101 3.68235 10.3176 6.58899 14 7C10.3176 7.41101 7.41101 10.3176 7 14C6.58899 10.3176 3.68235 7.41101 0 7C3.68235 6.58899 6.58899 3.68235 7 0Z" fill="%23964E13" /></svg>');
+          mask-size: contain;
+          mask-repeat: no-repeat;
+
           display: block;
           width: 14px;
           height: 14px;
           margin-bottom: auto;
           background: var(--secondary-color);
+
+          @include mobile {
+            width: 12px;
+            height: 12px;
+          }
         }
       }
     }
@@ -258,11 +346,19 @@
     line-height: 150%;
     color: var(--main-color);
 
+    @include mobile {
+      font-size: rem(12);
+    }
+
     span {
       font-weight: 500;
       font-size: rem(32);
       line-height: 100%;
       color: var(--main-color);
+
+      @include mobile {
+        font-size: rem(24);
+      }
     }
   }
 
@@ -275,6 +371,13 @@
 
     min-height: rem(43);
     width: 100%;
+
+    @include mobile {
+      font-size: rem(14);
+      padding-inline: rem(20);
+
+      min-height: rem(38);
+    }
   }
 
   &__cheaper {
@@ -290,6 +393,10 @@
 
     max-width: fit-content;
     margin: rem(15) auto 0 auto;
+
+    @include mobile {
+      font-size: rem(12);
+    }
 
     &:hover {
       text-decoration: none;

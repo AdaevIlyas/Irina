@@ -49,8 +49,16 @@ img {
   max-width: rem(1920);
   margin: 0 auto;
 
+  @include mobile {
+    padding: 0 rem(16);
+  }
+
   &_section {
     padding-inline: rem(60) rem(130);
+
+    @include mobile {
+      padding: 0 rem(16);
+    }
   }
 }
 
@@ -128,20 +136,20 @@ a {
   height: 100vh;
   -ms-scroll-chaining: none;
   overscroll-behavior: none;
-  overflow-x: hidden;
 
+  // overflow-x: hidden;
   // тестовое св-во, чтобы не прыгала страница, если прыгает, убираем
-  overflow-y: scroll;
+  // overflow-y: scroll;
 }
 
 .el-desktop {
   @include mobile {
-    display: none;
+    display: none !important;
   }
 }
 
 .el-mobile {
   @include desktop {
-    display: none;
+    display: none !important;
   }
 }

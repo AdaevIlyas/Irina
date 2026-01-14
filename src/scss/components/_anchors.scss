@@ -14,6 +14,10 @@
 
   gap: rem(30);
 
+  @include mobile {
+    display: none;
+  }
+
   &__item {
     flex: 0 0 auto;
 

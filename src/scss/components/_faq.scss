@@ -1,15 +1,28 @@
 .faq {
   margin-block: rem(250) rem(150);
 
+  @include mobile {
+    margin-block: rem(60) rem(40);
+  }
+
   &__inner {
     display: flex;
     align-items: start;
     gap: rem(100);
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(24);
+    }
   }
 
   &__title {
     padding-top: rem(15);
     flex: 1 1 auto;
+
+    @include mobile {
+      padding-top: 0;
+    }
   }
 
   &__body {
@@ -20,5 +33,10 @@
     gap: rem(4);
     border-radius: rem(10);
     overflow: hidden;
+
+    @include mobile {
+      flex: 1 1 auto;
+      width: 100%;
+    }
   }
 }

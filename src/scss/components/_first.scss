@@ -1,20 +1,39 @@
 .first {
   margin-block: rem(100);
 
+  @include mobile {
+    margin-block: rem(10) rem(40);
+  }
+
   &__inner {
     display: flex;
     gap: rem(160);
     padding-bottom: rem(60);
+
+    @include mobile {
+      flex-direction: column-reverse;
+      gap: rem(12);
+      padding-bottom: rem(27);
+    }
   }
 
   &__img {
     width: rem(586);
     height: rem(743);
     border-radius: rem(10);
+
+    @include mobile {
+      width: 100%;
+      height: rem(357);
+    }
   }
 
   &__info {
     padding-top: rem(118);
+
+    @include mobile {
+      padding-top: 0;
+    }
   }
 
   &__title {
@@ -31,10 +50,20 @@
     align-items: end;
     gap: rem(20);
 
+    @include mobile {
+      font-size: rem(32);
+      gap: rem(10);
+    }
+
     &:nth-child(1) {
       .first__title-decor {
         width: rem(102);
         height: rem(51);
+
+        @include mobile {
+          width: rem(48);
+          height: rem(24);
+        }
       }
     }
 
@@ -42,21 +71,42 @@
       .first__title-decor {
         width: rem(53);
         height: rem(53);
+
+        @include mobile {
+          width: rem(24);
+          height: rem(24);
+        }
       }
     }
 
     &:nth-child(3) {
       padding-left: rem(150);
 
+      @include mobile {
+        padding-left: rem(55);
+      }
+
       .first__title-decor {
         width: rem(102);
         height: rem(43);
+
+        @include mobile {
+          width: rem(53);
+          height: rem(24);
+        }
       }
     }
   }
 
   &__title-decor {
     margin-bottom: rem(10);
+
+    @include mobile {
+      margin-bottom: 0;
+
+      object-fit: contain;
+      object-position: left;
+    }
   }
 
   &__description {
@@ -70,6 +120,14 @@
     margin-top: rem(50);
     margin-left: rem(150);
     max-width: rem(363);
+
+    @include mobile {
+      font-size: rem(14);
+
+      margin-block: rem(20) rem(10);
+      margin-left: 0;
+      max-width: none;
+    }
   }
 
   &__link {
@@ -80,5 +138,15 @@
     margin-top: rem(25);
     margin-left: rem(150);
     max-width: max-content;
+
+    @include mobile {
+      font-size: rem(14);
+      min-height: rem(44);
+      padding-inline: rem(34) rem(44);
+
+      margin-top: rem(10);
+      margin-left: 0;
+      max-width: max-content;
+    }
   }
 }

@@ -4,6 +4,10 @@
 
   &__title {
     margin-bottom: rem(43);
+
+    @include mobile {
+      margin-bottom: rem(24);
+    }
   }
 
   &__btns {
@@ -11,6 +15,10 @@
     align-items: center;
     gap: rem(10);
     padding-bottom: rem(60);
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__btn {
@@ -53,14 +61,32 @@
     flex: 0 0 rem(1282);
     height: rem(400);
     margin-inline: 0;
+
+    @include mobile {
+      flex: 1 1 auto;
+
+      height: auto;
+      min-height: rem(280);
+
+      padding-inline: rem(16);
+      margin-inline: rem(-16);
+    }
   }
 
   &__swiper-wrapper {
     height: 100%;
+
+    @include mobile {
+    }
   }
 
   &__swiper-slide {
     height: 100%;
+
+    @include mobile {
+      flex: 0 0 auto;
+      width: rem(288);
+    }
 
     &:not(:last-child) {
       //   margin-right: rem(20);
@@ -76,11 +102,18 @@
   padding: rem(20);
   background: #fff;
 
+  @include mobile {
+  }
+
   &__head {
     display: flex;
     align-items: center;
     gap: rem(15);
     height: rem(60);
+
+    @include mobile {
+      height: rem(50);
+    }
   }
 
   &__head-img {
@@ -107,6 +140,10 @@
     font-size: rem(24);
     line-height: 100%;
     color: rgba(0, 0, 0, 0.85);
+
+    @include mobile {
+      font-size: rem(18);
+    }
   }
 
   &__head-city {
@@ -123,6 +160,10 @@
     height: rem(300);
 
     padding-top: rem(17);
+
+    @include mobile {
+      height: rem(190);
+    }
   }
 
   &__body-scroll {
@@ -138,6 +179,10 @@
     line-height: 130%;
     color: rgba(0, 0, 0, 0.85);
 
+    @include mobile {
+      font-size: rem(14);
+    }
+
     p,
     li {
       font-family: var(--font-family);
@@ -145,6 +190,10 @@
       font-size: rem(18);
       line-height: 130%;
       color: rgba(0, 0, 0, 0.85);
+
+      @include mobile {
+        font-size: rem(14);
+      }
     }
   }
 }

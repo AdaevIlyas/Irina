@@ -13,6 +13,11 @@
   &__icon {
     width: rem(22);
     height: rem(22);
+
+    @include mobile {
+      width: rem(14);
+      height: rem(14);
+    }
   }
 
   &::before {
@@ -67,6 +72,10 @@
   line-height: 100%;
   color: var(--main-color);
 
+  @include mobile {
+    font-size: rem(14);
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -83,6 +92,11 @@
   display: flex;
   align-items: center;
   gap: rem(8);
+
+  @include mobile {
+    flex-direction: column;
+    align-items: start;
+  }
 
   &.checked {
     .platform__label_one {
@@ -106,6 +120,10 @@
     font-size: rem(18);
     line-height: 120%;
     color: #c0c0c0;
+
+    @include mobile {
+      font-size: rem(14);
+    }
 
     &_one {
       color: var(--main-color);

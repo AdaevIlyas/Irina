@@ -2,6 +2,10 @@
   position: relative;
   padding-block: rem(100) rem(83);
 
+  @include mobile {
+    padding-block: rem(40) rem(28);
+  }
+
   &.checked {
     .special__tariff {
       &_one {
@@ -27,12 +31,25 @@
     border-radius: 0 rem(10) rem(1000) 0;
 
     background: var(--main-color);
+
+    @include mobile {
+      right: rem(16);
+
+      border-radius: 0 rem(10) rem(34) 0;
+    }
   }
 
   &__wrapper {
     display: flex;
     align-items: start;
     gap: rem(250);
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(24);
+
+      padding-right: rem(28);
+    }
   }
 
   &__decor {
@@ -42,6 +59,10 @@
 
     width: rem(343);
     height: rem(194);
+
+    @include mobile {
+      display: none;
+    }
   }
 
   &__title {
@@ -51,6 +72,11 @@
 
   &__body {
     flex: 0 0 rem(830);
+
+    @include mobile {
+      flex: 1 1 auto;
+      width: 100%;
+    }
   }
 
   &__text {
@@ -60,6 +86,11 @@
     line-height: 140%;
     color: #fff;
     margin-bottom: rem(25);
+
+    @include mobile {
+      font-size: rem(18);
+      margin-bottom: rem(16);
+    }
   }
 
   &__platform {
@@ -108,10 +139,21 @@
     font-size: rem(52);
     line-height: 120%;
     color: var(--white-color);
+
+    @include mobile {
+      padding-top: rem(20);
+
+      font-size: rem(32);
+      line-height: 100%;
+    }
   }
 
   &__tariff-cms {
     padding-top: rem(18);
+
+    @include mobile {
+      padding-top: rem(25);
+    }
 
     p,
     li {
@@ -121,6 +163,10 @@
       line-height: 130%;
       letter-spacing: -0.02em;
       color: var(--white-color);
+
+      @include mobile {
+        font-size: rem(14);
+      }
     }
 
     ul,
@@ -137,6 +183,10 @@
         gap: 8px;
 
         line-height: 1;
+
+        @include mobile {
+          line-height: 130%;
+        }
 
         &::before {
           flex: 0 0 auto;
@@ -177,24 +227,41 @@
     line-height: 150%;
     color: var(--white-color);
 
+    @include mobile {
+      padding-block: rem(25) rem(10);
+
+      font-size: rem(12);
+    }
+
     span {
       font-weight: 500;
       font-size: rem(32);
       line-height: 100%;
       color: var(--white-color);
+
+      @include mobile {
+        font-size: rem(24);
+      }
     }
   }
 
   &__tariff-btn {
-    max-width: rem(352);
-
     font-size: rem(18);
 
     padding-inline: rem(40);
 
     justify-content: center;
 
+    max-width: rem(352);
     min-height: rem(43);
     width: 100%;
+
+    @include mobile {
+      font-size: rem(14);
+
+      padding-inline: rem(20);
+
+      min-height: rem(38);
+    }
   }
 }

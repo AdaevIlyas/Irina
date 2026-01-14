@@ -5,7 +5,7 @@
 // import { isMobile, isTablet, isDesktop } from "./functions/check_client_width";
 
 // Реализация бургер-меню
-// import { burger } from './functions/burger';
+import { burger } from "./functions/burger";
 
 // Реализация модального окна
 // import GraphModal from 'graph-modal';
@@ -20,6 +20,17 @@ const swiperReviews = new Swiper(".js-swiper-reviews", {
   navigation: {
     nextEl: ".js-swiper-reviews--right",
     prevEl: ".js-swiper-reviews--left",
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: "auto",
+      spaceBetween: 8,
+    },
+
+    651: {
+      slidesPerView: 3,
+    },
   },
 });
 

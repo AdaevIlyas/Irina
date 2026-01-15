@@ -12,7 +12,11 @@
       }
 
       &_two {
-        display: flex;
+        display: grid;
+
+        @include mobile {
+          display: flex;
+        }
       }
     }
 

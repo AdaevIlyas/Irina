@@ -1,6 +1,10 @@
 .history {
   margin-block: rem(75) rem(260);
 
+  @include mobile {
+    margin-block: rem(40) rem(60);
+  }
+
   &__inner {
   }
 
@@ -8,15 +12,28 @@
     display: flex;
     align-items: start;
     gap: rem(100);
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(25);
+    }
   }
 
   &__title {
     padding-top: rem(140);
     flex: 1 1 auto;
+
+    @include mobile {
+      padding-top: 0;
+    }
   }
 
   &__body {
     flex: 0 0 rem(1275);
+
+    @include mobile {
+      flex: 1 1 auto;
+    }
   }
 
   &__top {
@@ -24,15 +41,31 @@
     gap: rem(20);
 
     padding-bottom: rem(90);
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      gap: rem(16);
+      padding-bottom: rem(16);
+    }
   }
 
   &__top-left {
     flex: 0 0 rem(435);
+
+    @include mobile {
+      flex: 1 1 auto;
+    }
   }
 
   &__top-left-text {
     padding: rem(120) rem(0) rem(90) 0;
     max-width: rem(375);
+
+    @include mobile {
+      padding: 0;
+      max-width: none;
+    }
   }
 
   &__top-left-img {
@@ -41,6 +74,12 @@
 
     width: rem(435);
     height: rem(650);
+
+    @include mobile {
+      margin-top: rem(16);
+      width: rem(286);
+      height: rem(430);
+    }
   }
 
   &__top-right {
@@ -49,6 +88,10 @@
   &__top-right-text {
     padding: rem(60) 0 0 rem(40);
     max-width: rem(707);
+
+    @include mobile {
+      padding: 0;
+    }
   }
 
   &__top-right-img {
@@ -68,6 +111,13 @@
     gap: rem(20);
 
     height: rem(390);
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(16);
+
+      height: auto;
+    }
   }
 
   &__middle-message {
@@ -75,6 +125,13 @@
     padding: rem(17) 0 rem(17) rem(32);
 
     max-width: rem(475);
+
+    @include mobile {
+      order: 2;
+
+      padding: rem(0) rem(0) rem(0) rem(20);
+      margin: rem(30) 0;
+    }
   }
 
   &__middle-img-1 {
@@ -82,6 +139,13 @@
 
     width: rem(283);
     height: rem(390);
+
+    @include mobile {
+      width: rem(286);
+      height: rem(390);
+
+      order: 1;
+    }
   }
 
   &__middle-img-2 {
@@ -89,11 +153,22 @@
 
     width: rem(487);
     height: rem(638);
+
+    @include mobile {
+      width: rem(286);
+      height: rem(374);
+
+      order: 3;
+    }
   }
 
   &__middle-text {
     padding-top: rem(150);
     max-width: rem(705);
+
+    @include mobile {
+      padding-top: rem(16);
+    }
   }
 
   &__messages {
@@ -105,12 +180,27 @@
     margin-block: rem(100) rem(120);
     object-fit: contain;
     object-position: left;
+
+    @include mobile {
+      width: 100%;
+      height: auto;
+
+      margin-block: rem(16);
+    }
   }
 
   &__bottom {
     display: flex;
     align-items: end;
     gap: rem(55);
+
+    // display: none;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: stretch;
+      gap: rem(16);
+    }
   }
 
   &__bottom-left {
@@ -124,11 +214,23 @@
 
     border-radius: rem(10);
     margin-bottom: rem(43);
+
+    @include mobile {
+      width: rem(289);
+      height: rem(432);
+
+      margin-bottom: 0;
+    }
   }
 
   &__bottom-message {
     margin-block: rem(85);
     padding: rem(10) 0 rem(10) rem(35);
+
+    @include mobile {
+      margin-block: rem(16);
+      padding: 0 0 0 rem(20);
+    }
   }
 
   &__scope {
@@ -138,6 +240,13 @@
     gap: rem(50);
 
     margin-top: rem(90);
+
+    @include mobile {
+      flex-direction: column;
+      gap: rem(16);
+
+      margin-top: rem(16);
+    }
   }
 
   &__scope-title {
@@ -150,8 +259,16 @@
       line-height: 100%;
       color: var(--main-color);
 
+      @include mobile {
+        font-size: rem(28);
+      }
+
       &:nth-child(2) {
         margin-left: rem(150);
+
+        @include mobile {
+          margin-left: 0;
+        }
       }
     }
   }
@@ -169,6 +286,11 @@
     color: var(--main-color);
 
     margin-block: rem(35) rem(30);
+
+    @include mobile {
+      font-size: rem(18);
+      margin-block: 0 rem(16);
+    }
   }
 
   &__scope-post {
@@ -176,6 +298,12 @@
     align-items: center;
     justify-content: end;
     gap: rem(20);
+
+    @include mobile {
+      gap: rem(10);
+      align-items: end;
+      justify-content: start;
+    }
   }
 
   &__scope-post-info {
@@ -184,6 +312,10 @@
     font-size: rem(36);
     line-height: 100%;
     color: var(--main-color);
+
+    @include mobile {
+      font-size: rem(24);
+    }
   }
 
   &__scope-post-name {
@@ -193,6 +325,10 @@
     font-size: rem(32);
     line-height: 100%;
     color: var(--main-color);
+
+    @include mobile {
+      font-size: rem(22);
+    }
 
     span {
       font-weight: 300;
@@ -209,6 +345,10 @@
     line-height: 130%;
     letter-spacing: -0.02em;
     color: var(--main-color);
+
+    @include mobile {
+      font-size: rem(16);
+    }
   }
 
   ul,
@@ -241,6 +381,10 @@
 
   *:not(:last-child) {
     margin-bottom: 0.6em;
+
+    @include mobile {
+      margin-bottom: 0.8em;
+    }
   }
 }
 
@@ -251,5 +395,9 @@
   line-height: 130%;
   letter-spacing: -0.02em;
   color: var(--main-color);
-  border-left: rem(4) solid var(--main-color);
+  border-left: rem(4) solid var(--secondary-color);
+
+  @include mobile {
+    font-size: rem(18);
+  }
 }

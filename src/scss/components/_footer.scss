@@ -5,7 +5,14 @@
   margin-top: rem(150);
   padding-block: rem(30) rem(50);
   border-radius: rem(30) rem(30) 0 0;
+
   background: #3d2116;
+
+  @include mobile {
+    margin-top: rem(90);
+    padding-block: rem(32);
+    border-radius: rem(20) rem(20) 0 0;
+  }
 
   &__inner {
   }
@@ -14,28 +21,52 @@
     width: 100%;
     height: rem(62);
 
+    @include mobile {
+      height: auto;
+    }
+
     &-inner {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: rem(20);
+
+      @include mobile {
+        flex-direction: column;
+        align-items: center;
+        gap: rem(40);
+      }
     }
 
     &-left {
       display: flex;
       align-items: center;
       gap: rem(253);
+
+      @include mobile {
+        flex-direction: column;
+        gap: rem(46);
+      }
     }
 
     &-logo {
       position: relative;
       width: rem(202);
       height: rem(62);
+
+      @include mobile {
+        position: static;
+      }
     }
 
     &-logo-icon {
       width: 100%;
       height: 100%;
+
+      @include mobile {
+        object-fit: contain;
+        object-position: left;
+      }
     }
 
     &-logo-subtitle {
@@ -49,12 +80,26 @@
       line-height: 130%;
       color: var(--white-color);
       opacity: 0.5;
+
+      @include mobile {
+        top: auto;
+        bottom: rem(0);
+        left: 50%;
+        transform: translateX(-50%);
+
+        font-size: rem(16);
+        line-height: 110%;
+      }
     }
 
     &-links {
       display: flex;
       align-items: center;
       gap: rem(20);
+
+      @include mobile {
+        flex-direction: column;
+      }
     }
 
     &-link {
@@ -65,6 +110,10 @@
       color: var(--white-color);
       transition: opacity 0.3s ease;
 
+      @include mobile {
+        line-height: 110%;
+      }
+
       @include hover {
         opacity: 0.7;
       }
@@ -74,6 +123,11 @@
       display: flex;
       align-items: center;
       gap: rem(50);
+
+      @include mobile {
+        flex-direction: column;
+        gap: rem(30);
+      }
     }
 
     &-phone {
@@ -104,6 +158,13 @@
       font-size: rem(18);
       min-height: rem(50);
       padding-inline: rem(30) rem(40);
+
+      @include mobile {
+        .btn-star__icon {
+          width: rem(22);
+          height: rem(22);
+        }
+      }
     }
   }
 
@@ -113,10 +174,24 @@
     gap: rem(123);
     padding-top: rem(68);
 
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      gap: rem(27);
+
+      padding-top: rem(40);
+      padding-bottom: rem(31);
+    }
+
     &-links {
       display: flex;
       align-items: center;
       gap: rem(30);
+
+      @include mobile {
+        flex-direction: column;
+        gap: rem(24);
+      }
     }
 
     &-link {
@@ -126,6 +201,11 @@
       line-height: 110%;
       color: #fff;
       transition: opacity 0.3s ease;
+
+      @include mobile {
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+      }
 
       @include hover {
         opacity: 0.7;
@@ -140,6 +220,16 @@
       color: rgba(255, 255, 255, 0.65);
 
       max-width: rem(818);
+
+      a {
+        color: inherit;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+      }
+
+      @include mobile {
+        font-size: rem(12);
+      }
     }
   }
 }

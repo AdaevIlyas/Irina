@@ -3,8 +3,17 @@
   margin-block: rem(150) rem(90);
   padding-block: rem(78) rem(90);
 
+  @include mobile {
+    margin-block: rem(45) rem(60);
+    padding-block: rem(60);
+  }
+
   .container_section {
     padding-left: rem(210);
+
+    @include mobile {
+      padding-left: rem(16);
+    }
   }
 
   &__bg {
@@ -17,6 +26,11 @@
     opacity: 0.2;
 
     background: var(--white-color);
+
+    @include mobile {
+      right: rem(16);
+      border-radius: 0 rem(10) rem(100) 0;
+    }
   }
 
   &__wrapper {
@@ -24,11 +38,36 @@
     flex-direction: column;
     padding-right: rem(174);
 
+    @include mobile {
+      padding-right: rem(30);
+    }
+
+    &:not(.supports__wrapper_padding) {
+      .supports__line {
+        &:nth-child(2) {
+          text-align: right;
+        }
+
+        &:nth-child(3) {
+          align-self: flex-start;
+          margin-left: rem(48);
+        }
+      }
+    }
+
     &_padding {
       padding-right: rem(233);
 
       .supports__line:nth-child(3) {
         padding-right: rem(80);
+
+        @include mobile {
+          padding-right: rem(15);
+        }
+      }
+
+      @include mobile {
+        padding-right: rem(30);
       }
     }
   }
@@ -47,6 +86,13 @@
 
     white-space: nowrap;
 
+    @include mobile {
+      position: relative;
+
+      font-size: rem(32);
+      white-space: wrap;
+    }
+
     &:nth-child(1) {
     }
     &:nth-child(2) {
@@ -55,6 +101,10 @@
     &:nth-child(3) {
       align-self: center;
       padding-right: rem(590);
+
+      @include mobile {
+        padding-right: 0;
+      }
     }
 
     &_padding {
@@ -69,6 +119,16 @@
 
     margin-left: rem(34);
     margin-bottom: rem(17);
+
+    @include mobile {
+      position: absolute;
+      right: rem(50);
+
+      width: rem(46);
+      height: rem(20);
+
+      margin: 0;
+    }
   }
 
   &__line-star {
@@ -78,5 +138,17 @@
 
     margin-right: rem(18);
     margin-bottom: rem(7);
+
+    @include mobile {
+      position: absolute;
+      left: 0;
+
+      transform: translateX(calc(-100% - rem(10)));
+
+      width: rem(24);
+      height: rem(24);
+
+      margin: 0;
+    }
   }
 }
